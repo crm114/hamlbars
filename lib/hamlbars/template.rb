@@ -80,14 +80,14 @@ module Haml
       def handlebars(expression, options={}, &block)
         express(['{{','}}'],expression,options,&block)
       end
-      alias hb handlebars
+      alias :hb :handlebars
 
       # The same as #handlebars except that it outputs "triple-stash"
       # expressions, which means that Handlebars won't escape the output.
       def handlebars!(expression, options={}, &block)
         express(['{{{','}}}'],expression,options,&block)
       end
-      alias hb! handlebars!
+      alias :hb! :handlebars!
 
     private
 
